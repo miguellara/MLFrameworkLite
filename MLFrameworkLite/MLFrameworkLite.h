@@ -6,8 +6,4 @@
 //  Copyright (c) 2013 Miguel Lara. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface MLFrameworkLite : NSObject
-
-@end
+#import "MLAssertionMacros.h"

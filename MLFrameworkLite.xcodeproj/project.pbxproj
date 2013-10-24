@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		49BB8D141818FCE1007400A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BB8D131818FCE1007400A5 /* Cocoa.framework */; };
 		49BB8D1E1818FCE1007400A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49BB8D1C1818FCE1007400A5 /* InfoPlist.strings */; };
-		49BB8D221818FCE1007400A5 /* MLFrameworkLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BB8D211818FCE1007400A5 /* MLFrameworkLite.m */; };
 		49BB8D291818FCE1007400A5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BB8D281818FCE1007400A5 /* XCTest.framework */; };
 		49BB8D2A1818FCE1007400A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BB8D131818FCE1007400A5 /* Cocoa.framework */; };
 		49BB8D2D1818FCE1007400A5 /* MLFrameworkLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BB8D101818FCE1007400A5 /* MLFrameworkLite.framework */; };
 		49BB8D331818FCE1007400A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49BB8D311818FCE1007400A5 /* InfoPlist.strings */; };
 		49BB8D351818FCE1007400A5 /* MLFrameworkLiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BB8D341818FCE1007400A5 /* MLFrameworkLiteTests.m */; };
+		49BB8D3F1818FD24007400A5 /* MLAssertionMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 49BB8D3E1818FD24007400A5 /* MLAssertionMacros.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +37,12 @@
 		49BB8D1D1818FCE1007400A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49BB8D1F1818FCE1007400A5 /* MLFrameworkLite-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLFrameworkLite-Prefix.pch"; sourceTree = "<group>"; };
 		49BB8D201818FCE1007400A5 /* MLFrameworkLite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLFrameworkLite.h; sourceTree = "<group>"; };
-		49BB8D211818FCE1007400A5 /* MLFrameworkLite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLFrameworkLite.m; sourceTree = "<group>"; };
 		49BB8D271818FCE1007400A5 /* MLFrameworkLiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLFrameworkLiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BB8D281818FCE1007400A5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		49BB8D301818FCE1007400A5 /* MLFrameworkLiteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MLFrameworkLiteTests-Info.plist"; sourceTree = "<group>"; };
 		49BB8D321818FCE1007400A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49BB8D341818FCE1007400A5 /* MLFrameworkLiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLFrameworkLiteTests.m; sourceTree = "<group>"; };
+		49BB8D3E1818FD24007400A5 /* MLAssertionMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAssertionMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				49BB8D201818FCE1007400A5 /* MLFrameworkLite.h */,
-				49BB8D211818FCE1007400A5 /* MLFrameworkLite.m */,
+				49BB8D3E1818FD24007400A5 /* MLAssertionMacros.h */,
 				49BB8D1A1818FCE1007400A5 /* Supporting Files */,
 			);
 			path = MLFrameworkLite;
@@ -151,6 +151,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BB8D3F1818FD24007400A5 /* MLAssertionMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49BB8D221818FCE1007400A5 /* MLFrameworkLite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
