@@ -13,23 +13,25 @@
 #pragma mark - Readability
 
 /*!
+ @def ML_INIT_DISABLED
  Marks an init method as disabled.
  Helpful when trying to indicate that the designated initializer has been replaced by another means of building instances
  for this class.
  
- Example on the .m file:
+ Example on the .h file:
  @code
  - (id)init ML_INIT_DISABLED;
  @endcode
  */
 #define ML_INIT_DISABLED \
-	{ NSAssert(@"Init method has been superceeded in this class, chedk code & documentation for alternatives."); return nil; }
+	__attribute__((unavailable("Init method has been superceeded, check code & documentation for alternatives.")))
 
 
 
 #pragma mark - Multithreading
 
 /*!
+ @def ML_ASSERT_MAIN_THREAD
  Asserts that the code is running on the current thread.
  */
 #define ML_ASSERT_MAIN_THREAD \
