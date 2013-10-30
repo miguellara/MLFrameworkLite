@@ -20,7 +20,7 @@
  
  Example on the .h file:
  @code
- - (id)init ML_INIT_DISABLED;
+ - (instancetype)init ML_INIT_DISABLED;
  @endcode
  */
 #define ML_INIT_DISABLED \
