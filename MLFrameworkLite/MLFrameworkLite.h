@@ -11,6 +11,9 @@
 #import "MLAssertionMacros.h"
 #import "MLLogMacros.h"
 
-@interface MLFrameworkLite : NSObject
+#import "NSString+MLFrameworkLite.h"
+#import "View+MLFrameworkLite.h"
 
-@end
+
+
+@interface MLFrameworkLite : NSObject @end
