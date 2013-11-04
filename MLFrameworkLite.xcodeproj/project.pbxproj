@@ -19,6 +19,12 @@
 		49BB8D331818FCE1007400A5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49BB8D311818FCE1007400A5 /* InfoPlist.strings */; };
 		49BB8D351818FCE1007400A5 /* MLFrameworkLiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BB8D341818FCE1007400A5 /* MLFrameworkLiteTests.m */; };
 		49BB8D3F1818FD24007400A5 /* MLAssertionMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 49BB8D3E1818FD24007400A5 /* MLAssertionMacros.h */; };
+		49DF17A3182812870079952A /* NSString+MLFrameworkLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 49DF17A1182812870079952A /* NSString+MLFrameworkLite.h */; };
+		49DF17A4182812870079952A /* NSString+MLFrameworkLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DF17A2182812870079952A /* NSString+MLFrameworkLite.m */; };
+		49DF17A5182812870079952A /* NSString+MLFrameworkLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DF17A2182812870079952A /* NSString+MLFrameworkLite.m */; };
+		49DF17A8182813C80079952A /* View+MLFrameworkLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 49DF17A6182813C80079952A /* View+MLFrameworkLite.h */; };
+		49DF17A9182813C80079952A /* View+MLFrameworkLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DF17A7182813C80079952A /* View+MLFrameworkLite.m */; };
+		49DF17AA182813C80079952A /* View+MLFrameworkLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DF17A7182813C80079952A /* View+MLFrameworkLite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,10 @@
 		49BB8D321818FCE1007400A5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49BB8D341818FCE1007400A5 /* MLFrameworkLiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLFrameworkLiteTests.m; sourceTree = "<group>"; };
 		49BB8D3E1818FD24007400A5 /* MLAssertionMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAssertionMacros.h; sourceTree = "<group>"; };
+		49DF17A1182812870079952A /* NSString+MLFrameworkLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MLFrameworkLite.h"; sourceTree = "<group>"; };
+		49DF17A2182812870079952A /* NSString+MLFrameworkLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MLFrameworkLite.m"; sourceTree = "<group>"; };
+		49DF17A6182813C80079952A /* View+MLFrameworkLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MLFrameworkLite.h"; sourceTree = "<group>"; };
+		49DF17A7182813C80079952A /* View+MLFrameworkLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MLFrameworkLite.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +127,8 @@
 			children = (
 				49AEFCA5181A4EDB00ED8796 /* MLFrameworkLite.h */,
 				49AEFCA6181A4EDB00ED8796 /* MLFrameworkLite.m */,
-				49BB8D3E1818FD24007400A5 /* MLAssertionMacros.h */,
-				49AEFCB1181C326A00ED8796 /* MLLogMacros.h */,
+				49DF17A0182812630079952A /* Macros */,
+				49DF179F1828125D0079952A /* Categories */,
 				49BB8D1A1818FCE1007400A5 /* Supporting Files */,
 			);
 			path = MLFrameworkLite;
@@ -152,6 +162,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		49DF179F1828125D0079952A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				49DF17A1182812870079952A /* NSString+MLFrameworkLite.h */,
+				49DF17A2182812870079952A /* NSString+MLFrameworkLite.m */,
+				49DF17A6182813C80079952A /* View+MLFrameworkLite.h */,
+				49DF17A7182813C80079952A /* View+MLFrameworkLite.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		49DF17A0182812630079952A /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				49BB8D3E1818FD24007400A5 /* MLAssertionMacros.h */,
+				49AEFCB1181C326A00ED8796 /* MLLogMacros.h */,
+			);
+			name = Macros;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -159,6 +189,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DF17A3182812870079952A /* NSString+MLFrameworkLite.h in Headers */,
+				49DF17A8182813C80079952A /* View+MLFrameworkLite.h in Headers */,
 				49AEFCB2181C334800ED8796 /* MLLogMacros.h in Headers */,
 				49AEFCA7181A4EDB00ED8796 /* MLFrameworkLite.h in Headers */,
 				49BB8D3F1818FD24007400A5 /* MLAssertionMacros.h in Headers */,
@@ -261,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				49AEFCA8181A4EDB00ED8796 /* MLFrameworkLite.m in Sources */,
+				49DF17A9182813C80079952A /* View+MLFrameworkLite.m in Sources */,
+				49DF17A4182812870079952A /* NSString+MLFrameworkLite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DF17AA182813C80079952A /* View+MLFrameworkLite.m in Sources */,
+				49DF17A5182812870079952A /* NSString+MLFrameworkLite.m in Sources */,
 				49BB8D351818FCE1007400A5 /* MLFrameworkLiteTests.m in Sources */,
 				49AEFCA9181A4EDB00ED8796 /* MLFrameworkLite.m in Sources */,
 			);
