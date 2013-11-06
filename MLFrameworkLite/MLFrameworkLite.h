@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#import "MLAppInfo.h"
 #import "MLAssertionMacros.h"
 #import "MLLogMacros.h"
 #import "MLMultithreading.h"
 
 #import "NSString+MLFrameworkLite.h"
 #import "View+MLFrameworkLite.h"
-
 
 
 @interface MLFrameworkLite : NSObject @end
