@@ -10,6 +10,7 @@
 
 #import "MLAssertionMacros.h"
 #import "MLLogMacros.h"
+#import "MLMultithreading.h"
 
 #import "NSString+MLFrameworkLite.h"
 #import "View+MLFrameworkLite.h"
