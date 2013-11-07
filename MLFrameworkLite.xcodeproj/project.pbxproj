@@ -426,6 +426,7 @@
 				GCC_PREFIX_HEADER = "MLFrameworkLite/MLFrameworkLite-Prefix.pch";
 				INFOPLIST_FILE = "MLFrameworkLite/MLFrameworkLite-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -441,6 +442,7 @@
 				GCC_PREFIX_HEADER = "MLFrameworkLite/MLFrameworkLite-Prefix.pch";
 				INFOPLIST_FILE = "MLFrameworkLite/MLFrameworkLite-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
