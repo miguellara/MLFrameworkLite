@@ -11,6 +11,8 @@
 
 @implementation ML_PLATFORM_VIEW (MLFrameworkLite)
 
+#pragma mark Dimensions
+
 - (CGPoint)ml_frameOrigin
 {
 	return self.frame.origin;
@@ -152,6 +154,19 @@
 	CGRect bounds = self.bounds;
 	bounds.size.height = value;
 	self.bounds = bounds;
+}
+
+
+#pragma mark Superview
+
+- (BOOL)ml_hasSuperview:(ML_PLATFORM_VIEW *)reference
+{
+	ML_PLATFORM_VIEW *current = self;
+	while (current != reference && current != nil)
+	{
+		current = [current superview];
+	}
+	return (current == reference);
 }
 
 

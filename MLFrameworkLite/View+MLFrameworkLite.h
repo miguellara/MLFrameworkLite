@@ -33,6 +33,8 @@
 @property (assign, nonatomic, getter = ml_boundsWidth, setter = ml_setBoundsWidth:) CGFloat ml_boundsWidth;
 @property (assign, nonatomic, getter = ml_boundsHeight, setter = ml_setBoundsHeight:) CGFloat ml_boundsHeight;
 
+- (BOOL)ml_hasSuperview:(ML_PLATFORM_VIEW *)reference;
+
 //- (CABasicAnimation *)ml_animateShake;
 
 @end
