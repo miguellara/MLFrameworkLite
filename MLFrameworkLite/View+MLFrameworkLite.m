@@ -156,20 +156,6 @@
 	self.bounds = bounds;
 }
 
-
-#pragma mark Superview
-
-- (BOOL)ml_hasSuperview:(ML_PLATFORM_VIEW *)reference
-{
-	ML_PLATFORM_VIEW *current = self;
-	while (current != reference && current != nil)
-	{
-		current = [current superview];
-	}
-	return (current == reference);
-}
-
-
 // Don't have time right now, but good to use eventually.
 //
 //#pragma mark Animations
