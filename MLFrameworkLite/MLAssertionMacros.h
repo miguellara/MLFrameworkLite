@@ -13,18 +13,18 @@
 #pragma mark - Readability
 
 /*!
- @def ML_INIT_DISABLED
- Marks an init method as disabled.
- Helpful when trying to indicate that the designated initializer has been replaced by another means of building instances
- for this class.
+ @def ML_METHOD_DISABLED
+ Marks a method as disabled.
+ Helpful when trying to indicate that the designated initializer has been replaced by another means of building
+ instances for this class.
  
  Example on the .h file:
  @code
- - (instancetype)init ML_INIT_DISABLED;
+ - (instancetype)init ML_METHOD_DISABLED;
  @endcode
  */
-#define ML_INIT_DISABLED \
-	__attribute__((unavailable("Init method has been superceeded, check code & documentation for alternatives.")))
+#define ML_METHOD_DISABLED \
+	__attribute__((unavailable("This method has been superceeded, check code & documentation for alternatives.")))
 
 
 
