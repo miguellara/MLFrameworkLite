@@ -15,8 +15,8 @@
  @def MLLogError
  Convenient macro to log an error.
  */
-#define MLLogError(ERROR, ACTION, ...) NSLog(@"Error occurred in %@ when %@:\n\t%@", \
-											 NSStringFromSelector(_cmd), \
+#define MLLogError(ERROR, ACTION, ...) NSLog(@"Error occurred in %s when %@:\n\t%@", \
+											 __PRETTY_FUNCTION__, \
 											 [NSString stringWithFormat:ACTION, ##__VA_ARGS__], \
 											 ERROR)
 
