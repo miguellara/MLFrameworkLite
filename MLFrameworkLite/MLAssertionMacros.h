@@ -42,12 +42,12 @@
  @def Annotates a Template Method that has to be implemented by a subclass.
  Example of use in .m file:
  @code
- - (void)templateMethod MLSubclassResponsability();
- - (BOOL)templateMethodRetuningBoolean MLSubclassResponsability(NO);
- - (id)templateMethodRetuningObject MLSubclassResponsability(nil);
+ - (void)templateMethod ML_SUBCLASS_RESPONSABILITY();
+ - (BOOL)templateMethodRetuningBoolean ML_SUBCLASS_RESPONSABILITY(NO);
+ - (id)templateMethodRetuningObject ML_SUBCLASS_RESPONSABILITY(nil);
  @code
  */
-#define MLSubclassResponsability(RETURN_VALUE) \
+#define ML_SUBCLASS_RESPONSABILITY(RETURN_VALUE) \
 	{\
 		NSAssert(NO, @"Template method %@ should be implemented by subclass.", NSStringFromSelector(_cmd)); \
 		return RETURN_VALUE;\
