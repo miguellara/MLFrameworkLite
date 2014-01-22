@@ -17,4 +17,6 @@
  */
 - (BOOL)ml_isEmpty;
 
+- (BOOL)ml_isValidEmailAddress;
+
 @end
