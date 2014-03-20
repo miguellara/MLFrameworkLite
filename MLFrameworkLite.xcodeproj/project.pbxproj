@@ -44,6 +44,7 @@
 		498A3910182ACC8F00771E1F /* MLMultithreading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMultithreading.h; sourceTree = "<group>"; };
 		498A3918182AFEEE00771E1F /* MLAppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLAppInfo.h; sourceTree = "<group>"; };
 		49A2D1CA185314830027F7CC /* NSStringFrameworkLiteExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringFrameworkLiteExtensions.m; sourceTree = "<group>"; };
+		49A44B2818C179CC002E5D1B /* MLCompilationMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLCompilationMacros.h; sourceTree = "<group>"; };
 		49AEFCA5181A4EDB00ED8796 /* MLFrameworkLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLFrameworkLite.h; sourceTree = "<group>"; };
 		49AEFCA6181A4EDB00ED8796 /* MLFrameworkLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLFrameworkLite.m; sourceTree = "<group>"; };
 		49AEFCB1181C326A00ED8796 /* MLLogMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLLogMacros.h; sourceTree = "<group>"; };
@@ -185,6 +186,7 @@
 			children = (
 				498A3918182AFEEE00771E1F /* MLAppInfo.h */,
 				49BB8D3E1818FD24007400A5 /* MLAssertionMacros.h */,
+				49A44B2818C179CC002E5D1B /* MLCompilationMacros.h */,
 				49AEFCB1181C326A00ED8796 /* MLLogMacros.h */,
 				498A3910182ACC8F00771E1F /* MLMultithreading.h */,
 			);

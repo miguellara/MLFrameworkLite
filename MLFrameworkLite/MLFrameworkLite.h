@@ -10,6 +10,7 @@
 
 #import "MLAppInfo.h"
 #import "MLAssertionMacros.h"
+#import "MLCompilationMacros.h"
 #import "MLLogMacros.h"
 #import "MLMultithreading.h"
 
