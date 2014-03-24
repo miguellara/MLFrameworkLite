@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Miguel Lara. All rights reserved.
 //
 
-#import <Quartz/Quartz.h>
+#import <QuartzCore/QuartzCore.h>
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 	#import <UIKit/UIKit.h>
