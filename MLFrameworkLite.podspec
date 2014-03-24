@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "MLFrameworkLite"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "Lite framework with some helpful macros and helpers."
   s.homepage         = "https://bitbucket.org/miguellara/mlframeworklite.git"
   s.license          = 'MIT'
