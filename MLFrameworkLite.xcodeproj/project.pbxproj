@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49007B0B18E8A5BA00D5F5BB /* MLFrameworkLite.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MLFrameworkLite.podspec; sourceTree = SOURCE_ROOT; };
 		498A3910182ACC8F00771E1F /* MLMultithreading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMultithreading.h; sourceTree = "<group>"; };
 		498A3918182AFEEE00771E1F /* MLAppInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLAppInfo.h; sourceTree = "<group>"; };
 		49A2D1CA185314830027F7CC /* NSStringFrameworkLiteExtensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringFrameworkLiteExtensionsTests.m; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 		49BB8D1A1818FCE1007400A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49007B0B18E8A5BA00D5F5BB /* MLFrameworkLite.podspec */,
 				49BB8D1B1818FCE1007400A5 /* MLFrameworkLite-Info.plist */,
 				49BB8D1C1818FCE1007400A5 /* InfoPlist.strings */,
 				49BB8D1F1818FCE1007400A5 /* MLFrameworkLite-Prefix.pch */,
