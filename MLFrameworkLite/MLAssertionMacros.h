@@ -32,10 +32,17 @@
 
 /*!
  @def ML_ASSERT_MAIN_THREAD
- Asserts that the code is running on the current thread.
+ Asserts that the code is running on the main thread.
  */
 #define ML_ASSERT_MAIN_THREAD \
-	NSAssert([NSThread currentThread].isMainThread, @"Should me on main thread. Running instead on %@", [NSThread currentThread])
+	NSAssert([NSThread currentThread].isMainThread, @"Should be on main thread. Running on %@", [NSThread currentThread])
+
+/*!
+ @def ML_ASSERT_NOT_MAIN_THREAD
+ Asserts that the code is NOT running on the main thread.
+ */
+#define ML_ASSERT_NOT_MAIN_THREAD \
+NSAssert(![NSThread currentThread].isMainThread, @"Should not be on main thread. Running on %@", [NSThread currentThread])
 
 
 /*!
