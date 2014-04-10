@@ -7,6 +7,8 @@
 //
 
 #import "NSString+MLFrameworkLite.h"
+#import <CommonCrypto/CommonDigest.h>
+
 
 @implementation NSString (MLFrameworkLite)
 
@@ -35,6 +37,21 @@
 	NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"self MATCHES[c] %@", emailRegex];
 	
 	return [emailTest evaluateWithObject:self];
+}
+
+- (NSString *)ml_md5String
+{
+	const char *cstr = [self UTF8String];
+    unsigned char result[16];
+    CC_MD5(cstr, (CC_LONG) strlen(cstr), result);
+	
+    return [NSString stringWithFormat:
+			@"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
+			result[0u], result[1u], result[2u], result[3u],
+			result[4u], result[5u], result[6u], result[7u],
+			result[8u], result[9u], result[10u], result[11u],
+			result[12u], result[13u], result[14u], result[15u]
+			];
 }
 
 @end

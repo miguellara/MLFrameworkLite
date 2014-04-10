@@ -19,4 +19,6 @@
 
 - (BOOL)ml_isValidEmailAddress;
 
+- (NSString *)ml_md5String;
+
 @end
