@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'MLFrameworkLite/**/*.{h,m}'
-  s.frameworks = 'QuartzCore', 'XCTest'
+  s.frameworks = 'QuartzCore'
   s.dependency 'libextobjc', '~> 0.4'
 end
