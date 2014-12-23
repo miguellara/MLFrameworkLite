@@ -76,6 +76,49 @@
 
 
 
+#pragma mark -ml_isValidEmailAddress tests
+
+- (void)testCorrectEmailAddressIsValid
+{
+	XCTAssertTrue([@"miguel@mac.com" ml_isValidEmailAddress]);
+	XCTAssertTrue([@"MIGUEL@MAC.COM" ml_isValidEmailAddress]);
+}
+
+- (void)testEmailAddressWithAdditionIsValid
+{
+	XCTAssertTrue([@"miguel+1@mac.com" ml_isValidEmailAddress]);
+}
+
+- (void)testEmailAddressMissingTheDomainIsInvalid
+{
+	XCTAssertFalse([@"miguel" ml_isValidEmailAddress]);
+}
+
+- (void)testEmailAddressMissingTheUserIsInvalid
+{
+	XCTAssertFalse([@"@mac" ml_isValidEmailAddress]);
+}
+
+- (void)testEmailAddressWithIncompleteDomainIsInvalid
+{
+	XCTAssertFalse([@"miguel@mac." ml_isValidEmailAddress]);
+}
+
+- (void)testEmailAddressWithInvalidCharactersIsInvalid
+{
+	XCTAssertFalse([@"miguel lara@mac.com" ml_isValidEmailAddress]);
+}
+
+
+#pragma mark -ml_md5String tests
+
+- (void)testMD5String
+{
+	XCTAssertEqualObjects([@"i digest this" ml_md5String], @"0AEC05EF8873D0E29D398B7506D69B90");
+}
+
+
+
 #pragma mark -ml_isEmpty tests
 
 - (void)testEmptyStringShouldBeEmpty
@@ -113,6 +156,73 @@
 	NSString *sut = @"lorem  \n";
     XCTAssertFalse([sut ml_isEmpty], @"String should be considered empty");
 }
+
+
+
+#pragma mark -ml_startsWith:options: tests
+
+- (void)testStartsWithOptionsSameStringShouldBeTrueWithDefaultOptions {
+	NSString *sut = @"Lorem";
+	XCTAssertTrue([sut ml_startsWith:sut options:0], @"\"Lorem\" starts with \"Lorem\"");
+}
+
+- (void)testStartsWithOptionsUsesGivenOptions {
+	NSString *sut = @"Lorem";
+	XCTAssertFalse([sut ml_startsWith:@"lore" options:0], @"\"Lorem\" starts with \"lore\" (case sensitive)");
+	XCTAssertTrue([sut ml_startsWith:@"lore" options:NSCaseInsensitiveSearch],
+				  @"\"Lorem\" starts with \"lore\" (case insensitive)");
+}
+
+- (void)testStartsWithOptionsDifferentStringShouldBeFalseWithDefaultOptions {
+	NSString *sut = @"Lorem";
+	XCTAssertFalse([sut ml_startsWith:@"Ipsum" options:0], @"\"Lorem\" does not start with \"Ipsum\"");
+}
+
+
+
+#pragma mark -ml_startsWith: tests 
+// Convenience method based on -ml_startsWith:comparisonOptions:
+
+- (void)testStartsWithSameStringShouldBeTrue {
+	NSString *sut = @"Lorem";
+	XCTAssertTrue([sut ml_startsWith:sut], @"\"Lorem\" starts with \"Lorem\"");
+}
+
+- (void)testStartsWithMatchingPartialString {
+	NSString *sut = @"Lorem";
+	XCTAssertTrue([sut ml_startsWith:@"Lor"], @"\"Lorem\" starts with \"Lor\"");
+}
+
+- (void)testStartsWithIsCaseSensitive {
+	NSString *sut = @"Lorem";
+	XCTAssertFalse([sut ml_startsWith:@"lor"], @"\"Lorem\" starts with \"lor\" (case sensitive)");
+}
+
+- (void)testStartsWithDifferentStringShouldBeFalse {
+	NSString *sut = @"Lorem";
+	XCTAssertFalse([sut ml_startsWith:@"Ipsum"], @"\"Lorem\" does not start with \"Ipsum\"");
+}
+
+
+
+#pragma mark -ml_startsWithSearchString: tests
+// Convenience method based on -ml_startsWith:comparisonOptions:
+
+- (void)testStartsWithSearchIsCaseInsensitive {
+	NSString *sut = @"Lorem";
+	XCTAssertTrue([sut ml_startsWithSearch:@"lore"], @"\"Lorem\" starts with \"lore\" (case insensitive)");
+}
+
+- (void)testStartsWithSearchIsDiacriticInsensitive {
+	NSString *sut = @"Lorem";
+	XCTAssertTrue([sut ml_startsWithSearch:@"Löré"], @"\"Lorem\" starts with \"lore\" (diacritic insensitive)");
+}
+
+- (void)testStartsWithSearchEmptyStringShouldBeTrue {
+	NSString *sut = @"Lorem";
+	XCTAssertTrue([sut ml_startsWithSearch:@""], @"Filtering with an empty string should always be true");
+}
+
 
 
 @end

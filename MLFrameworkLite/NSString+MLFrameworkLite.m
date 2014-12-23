@@ -54,4 +54,25 @@
 			];
 }
 
+- (BOOL)ml_startsWith:(NSString *)begining options:(NSStringCompareOptions)options
+{
+	return [self rangeOfString:begining options:NSAnchoredSearch | options].location != NSNotFound;
+}
+
+- (BOOL)ml_startsWith:(NSString *)begining
+{
+	return [self ml_startsWith:begining options:0];
+}
+
+- (BOOL)ml_startsWithSearch:(NSString *)search
+{
+	if (search.ml_isEmpty) {
+		return YES;
+	}
+	static NSStringCompareOptions const kOptions = (NSCaseInsensitiveSearch
+													| NSDiacriticInsensitiveSearch
+													| NSWidthInsensitiveSearch);
+	return [self ml_startsWith:search options:kOptions];
+}
+
 @end
